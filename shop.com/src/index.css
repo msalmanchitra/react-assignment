@@ -1,0 +1,11 @@
+/* Browser ke default margins khatam karne ke liye */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+}
