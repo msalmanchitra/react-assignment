@@ -1,440 +1,171 @@
-/* =========================
-   HERO SECTION
-========================= */
+@import url('https://fonts.googleapis.com/css2?family=Integral+CF:wght@700&family=Satoshi:wght@400;500;700&display=swap');
 
-.hero {
-  width: 100%;
-  min-height: 444px;
-  background: #f7f5f5;
+.hero-section {
+  background-color: #F2F0F1;
+  padding: 40px 20px;
   overflow: hidden;
-  position: relative;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Satoshi', sans-serif;
 }
 
 .hero-container {
-  width: 100%;
-  max-width: 1100px;
-  min-height: 444px;
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 0 30px;
   display: flex;
-  position: relative;
-  box-sizing: border-box;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
 
-/* =========================
-   LEFT CONTENT
-========================= */
-
+/* Left Content Styles */
 .hero-content {
-  width: 50%;
-  padding-top: 63px;
-  position: relative;
-  z-index: 5;
-}
-
-.hero-content h1 {
-  margin: 0;
-  padding: 0;
-
-  font-size: clamp(42px, 4.1vw, 58px);
-  line-height: 0.89;
-  letter-spacing: -2.6px;
-  font-weight: 900;
-
-  color: #000;
-}
-
-.hero-content p {
-  margin: 17px 0 0;
-
-  font-size: 11px;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color: #777;
-}
-
-/* =========================
-   BUTTON
-========================= */
-
-.hero-button {
-  margin-top: 16px;
-
-  width: 140px;
-  height: 36px;
-
-  border: none;
-  border-radius: 50px;
-
-  background: #000;
-  color: #fff;
-
-  font-size: 11px;
-  font-weight: 500;
-
-  cursor: pointer;
-
-  transition:
-    transform 0.25s ease,
-    background 0.25s ease;
-}
-
-.hero-button:hover {
-  transform: translateY(-2px);
-  background: #222;
-}
-
-/* =========================
-   STATS
-========================= */
-
-.hero-stats {
-  display: flex;
-  align-items: stretch;
-
-  margin-top: 32px;
-}
-
-.stat-item {
-  display: flex;
-  flex-direction: column;
-
-  padding-right: 21px;
-  margin-right: 20px;
-}
-
-.stat-item strong {
-  font-size: 28px;
-  line-height: 1;
-
-  font-weight: 500;
-  letter-spacing: -1px;
-
-  color: #111;
-}
-
-.stat-item span {
-  margin-top: 5px;
-
-  font-size: 10px;
-  line-height: 1.2;
-
-  color: #777;
-  white-space: nowrap;
-}
-
-.stat-border {
-  border-right: 1px solid #dedede;
-}
-
-/* =========================
-   RIGHT VISUAL
-========================= */
-
-.hero-visual {
-  width: 55%;
-  height: 444px;
-
-  position: absolute;
-  right: -5px;
-  top: 0;
-
+  flex: 1;
+  min-width: 300px;
+  max-width: 600px;
   z-index: 2;
 }
 
-/* =========================
-   MODEL IMAGE
-========================= */
+.hero-title {
+  font-family: 'Integral CF', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  color: #000000;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
 
-.hero-models {
-  position: absolute;
+.hero-description {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
 
-  width: 525px;
-  max-width: none;
+.hero-btn {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 16px 64px;
+  border-radius: 62px;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-bottom: 50px;
+}
 
+.hero-btn:hover {
+  background-color: #262626;
+}
+
+/* Stats Styles */
+.hero-stats {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.stat-item h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 4px;
+}
+
+.stat-item p {
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.stat-divider {
+  width: 1px;
+  height: 50px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Right Image Styles */
+/* .hero-image-wrapper {
+  flex: 1;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 300px;
+  margin-top: 30px;
+} */
+ .hero-image-wrapper {
+  flex: 1.3; /* Isko thoda barha diya taake image zyada area le */
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  margin-top: 130px;
+}
+
+.hero-main-image {
+  width: 100%;
+  max-width: 600px; /* Isko wahi purane size par rakhne dein taake div na barhe */
   height: auto;
-
-  right: -7px;
-  bottom: 0;
-
-  z-index: 3;
-
-  display: block;
+  object-fit: contain;
+  transform: scale(1.3); /* Yahan se aap sirf image ko 30% ya mazeed bara kar sakte hain (jaise 1.4 ya 1.5) */
+  transform-origin: center;
 }
-
-/* =========================
-   DECORATIVE STARS
-========================= */
-
-.star-icon {
+/* Sparkle Icons */
+.sparkle {
   position: absolute;
-
-  display: block;
-
-  width: 34px;
-  height: 34px;
-
-  background: #000;
-
-  clip-path: polygon(
-    50% 0%,
-    61% 31%,
-    76% 44%,
-    100% 50%,
-    76% 56%,
-    61% 69%,
-    50% 100%,
-    39% 69%,
-    24% 56%,
-    0% 50%,
-    24% 44%,
-    39% 31%
-  );
-
-  z-index: 5;
+  color: #000000;
+  font-size: 24px;
+  user-select: none;
 }
 
-.star-small {
-  width: 34px;
-  height: 34px;
-
-  left: 27px;
-  top: 201px;
+.sparkle-top {
+  top: 10%;
+  right: 5%;
+  font-size: 40px;
 }
 
-.star-large {
-  width: 67px;
-  height: 67px;
-
-  right: 35px;
-  top: 59px;
+.sparkle-bottom {
+  top: 45%;
+  left: 5%;
+  font-size: 28px;
 }
 
-/* =========================
-   TABLET
-========================= */
-
-@media (max-width: 900px) {
-
-  .hero {
-    min-height: 430px;
-  }
-
+/* Responsive Breakpoints */
+@media (max-width: 992px) {
   .hero-container {
-    min-height: 430px;
-    padding: 0 28px;
-  }
-
-  .hero-content {
-    padding-top: 58px;
-    width: 54%;
-  }
-
-  .hero-content h1 {
-    font-size: clamp(38px, 5vw, 50px);
-  }
-
-  .hero-content p {
-    font-size: 10px;
-  }
-
-  .hero-visual {
-    height: 430px;
-    right: -20px;
-  }
-
-  .hero-models {
-    width: 490px;
-    right: -15px;
-  }
-
-  .star-large {
-    right: 30px;
-  }
-
-  .star-small {
-    left: 10px;
-  }
-
-  .stat-item {
-    padding-right: 15px;
-    margin-right: 15px;
-  }
-
-  .stat-item strong {
-    font-size: 25px;
-  }
-
-  .stat-item span {
-    font-size: 9px;
-  }
-}
-
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
-
-  .hero {
-    min-height: auto;
-  }
-
-  .hero-container {
-    min-height: 680px;
-    padding: 0 22px;
-
-    display: block;
-  }
-
-  .hero-content {
-    width: 100%;
-    padding-top: 45px;
+    flex-direction: column;
     text-align: center;
   }
-
-  .hero-content h1 {
-    font-size: clamp(38px, 11vw, 52px);
-    line-height: 0.92;
-    letter-spacing: -1.8px;
+  
+  .hero-content {
+    max-width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-
-  .hero-content p {
-    margin-top: 17px;
-
-    font-size: 11px;
-    line-height: 1.5;
-  }
-
-  .desktop-break {
-    display: none;
-  }
-
-  .hero-button {
-    margin-top: 18px;
-  }
-
-  /* IMAGE AREA */
-
-  .hero-visual {
-    width: 100%;
-    height: 365px;
-
-    position: absolute;
-
-    left: 0;
-    right: auto;
-    top: auto;
-    bottom: 0;
-  }
-
-  .hero-models {
-    width: 430px;
-    max-width: none;
-
-    right: 50%;
-    bottom: 0;
-
-    transform: translateX(50%);
-  }
-
-  /* STATS */
-
-  .hero-stats {
+  
+   .hero-stats {
     justify-content: center;
-    margin-top: 30px;
-  }
+  } 
 
-  .stat-item {
-    padding-right: 12px;
-    margin-right: 12px;
-  }
-
-  .stat-item strong {
-    font-size: 21px;
-  }
-
-  .stat-item span {
-    font-size: 8px;
-  }
-
-  /* STARS */
-
-  .star-large {
-    width: 45px;
-    height: 45px;
-
-    right: 25px;
-    top: 40px;
-  }
-
-  .star-small {
-    width: 27px;
-    height: 27px;
-
-    left: 35px;
-    top: 150px;
+  .sparkle-bottom {
+    left: 10%;
   }
 }
 
-/* =========================
-   SMALL MOBILE
-========================= */
 
-@media (max-width: 420px) {
-
-  .hero-container {
-    min-height: 630px;
-  }
-
-  .hero-content {
-    padding-top: 38px;
-  }
-
-  .hero-content h1 {
-    font-size: 37px;
-  }
-
-  .hero-content p {
-    font-size: 10px;
-  }
-
-  .hero-models {
-    width: 390px;
-  }
-
-  .hero-visual {
-    height: 330px;
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 36px;
   }
 
   .hero-stats {
-    margin-top: 27px;
+    gap: 20px;
   }
 
-  .stat-item {
-    padding-right: 8px;
-    margin-right: 8px;
-  }
-
-  .stat-item strong {
-    font-size: 18px;
-  }
-
-  .stat-item span {
-    font-size: 7px;
-  }
-
-  .star-large {
-    width: 40px;
-    height: 40px;
-    right: 20px;
-  }
-
-  .star-small {
-    width: 23px;
-    height: 23px;
-    left: 25px;
+  .stat-divider {
+    display: none; /* Mobile pe dividers hide karne ke liye */
   }
 }

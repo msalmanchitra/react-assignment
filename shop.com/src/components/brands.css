@@ -1,0 +1,74 @@
+.brands-section {
+  background-color: #000000;
+  padding: 40px 20px;
+  width: 100%;
+}
+
+.brands-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+}
+
+.brand-item {
+  color: #ffffff;
+  font-weight: 700;
+  letter-spacing: 1px;
+  user-select: none;
+  white-space: nowrap;
+}
+
+/* Original Font Styles & Look matching Shop.co */
+.brand-versace {
+  font-family: 'Times New Roman', serif;
+  font-size: 32px;
+}
+
+.brand-zara {
+  font-family: 'Didot', 'Bodoni MT', serif;
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.brand-gucci {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 34px;
+  letter-spacing: 3px;
+}
+
+.brand-prada {
+  font-family: 'Georgia', serif;
+  font-size: 32px;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+.brand-calvin {
+  font-family: 'Arial', sans-serif;
+  font-size: 30px;
+  font-weight: 300;
+}
+
+/* Responsive adjustments for Mobile & Tablets */
+@media (max-width: 992px) {
+  .brands-container {
+    justify-content: center;
+    gap: 25px 40px;
+  }
+}
+
+@media (max-width: 576px) {
+  .brands-container {
+    gap: 20px 30px;
+  }
+  
+  .brand-versace { font-size: 24px; }
+  .brand-zara { font-size: 26px; }
+  .brand-gucci { font-size: 24px; }
+  .brand-prada { font-size: 24px; }
+  .brand-calvin { font-size: 22px; }
+}
