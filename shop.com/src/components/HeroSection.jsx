@@ -1,62 +1,84 @@
-import React from 'react';
-import './HeroSection.css';
+import "./HeroSection.css";
+import heroModels from "../assets/images/hero-models.png";
 
-const HeroSection = () => {
+const stats = [
+  {
+    number: "200+",
+    label: "International Brands",
+  },
+  {
+    number: "2,000+",
+    label: "High-Quality Products",
+  },
+  {
+    number: "30,000+",
+    label: "Happy Customers",
+  },
+];
+
+function StarIcon({ className = "" }) {
+  return <span className={`star-icon ${className}`} aria-hidden="true" />;
+}
+
+export default function Hero() {
   return (
-    <section className="hero-section">
+    <section className="hero">
       <div className="hero-container">
-        
-        {/* Left Content Column */}
-        <div className="hero-content">
-          <div className="hero-title-wrapper">
-            <h1 className="hero-heading">
-              FIND CLOTHES THAT MATCHES YOUR STYLE
-            </h1>
-            {/* Decorative Sparkle Icon (Right side of heading) */}
-            <div className="sparkle-icon sparkle-1">✦</div>
-          </div>
 
-          <p className="hero-description">
-            Browse through our diverse range of meticulously crafted garments, designed to bring out your individuality and cater to your sense of style.
+        {/* LEFT CONTENT */}
+        <div className="hero-content">
+          <h1>
+            FIND CLOTHES
+            <br />
+            THAT MATCHES
+            <br />
+            YOUR STYLE
+          </h1>
+
+          <p>
+            Browse through our diverse range of meticulously crafted garments,
+            designed
+            <br className="desktop-break" />
+            to bring out your individuality and cater to your sense of style.
           </p>
 
-          <button className="hero-btn">
+          <button className="hero-button">
             Shop Now
           </button>
 
-          {/* Stats Section */}
+          {/* STATS */}
           <div className="hero-stats">
-            <div className="stat-item">
-              <h3 className="stat-number">200+</h3>
-              <p className="stat-label">International Brands</p>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <h3 className="stat-number">2,000+</h3>
-              <p className="stat-label">High-Quality Products</p>
-            </div>
-            <div className="stat-divider"></div>
-            <div className="stat-item">
-              <h3 className="stat-number">30,000+</h3>
-              <p className="stat-label">Happy Customers</p>
-            </div>
+            {stats.map((stat, index) => (
+              <div
+                className={`stat-item ${
+                  index !== stats.length - 1 ? "stat-border" : ""
+                }`}
+                key={stat.number}
+              >
+                <strong>{stat.number}</strong>
+                <span>{stat.label}</span>
+              </div>
+            ))}
           </div>
         </div>
 
-        {/* Right Image Column */}
-        <div className="hero-image-wrapper">
-          <div className="sparkle-icon sparkle-2">✦</div>
-          {/* Yahan aap apni image ka path daal sakte hain */}
-          <img 
-            src="./public/images/Hero.png" 
-            alt="Models showcasing stylish fashion clothes" 
-            className="HeroSection-main-image"
+        {/* RIGHT IMAGE */}
+        <div className="hero-visual">
+
+          {/* Small decorative icon */}
+          <StarIcon className="star-small" />
+
+          {/* Large decorative icon */}
+          <StarIcon className="star-large" />
+
+          <img
+            src={heroModels}
+            alt="Fashion models"
+            className="hero-models"
           />
         </div>
 
       </div>
     </section>
   );
-};
-
-export default HeroSection;
+}
